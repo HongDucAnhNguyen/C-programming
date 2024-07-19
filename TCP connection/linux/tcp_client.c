@@ -18,14 +18,12 @@ int main()
     ////////////////////////////////////////////////////////
 
     // declare socket
-    int network_socket;
+    int client_socket;
 
     char server_response[1024]; // this buffer holds the server response
 
     // this data is the request message string, it lets the server know this is a GET request which asks for a web page
-    char *data;
-
-    data = "GET / HTTP/1.0\r\n\r\n";
+    char *request_data = "GET / HTTP/1.0\r\n\r\n";
     // explanation of data message:
     /*
     GET: requesting to retrieve(GET) data
@@ -41,9 +39,9 @@ int main()
      0 = identifier number for the protocol desired, 0 means default protocol, which is TCP
 
     */
-    network_socket = socket(AF_INET, SOCK_STREAM, 0);
+    client_socket = socket(AF_INET, SOCK_STREAM, 0);
 
-    if (network_socket < 0)
+    if (client_socket < 0)
     {
 
         printf("failed to initialize socket\n");
@@ -63,7 +61,7 @@ int main()
     ////////////////////////////////////////////////////////
 
     // try to connect
-    int connection_status = connect(network_socket, (struct sockaddr *)&server_address, sizeof(server_address));
+    int connection_status = connect(client_socket, (struct sockaddr *)&server_address, sizeof(server_address));
 
     if (connection_status == -1)
     {
@@ -79,16 +77,16 @@ int main()
     ////////////////////////////////////////////////////////
 
     // connection has been established, thus send the request message through the socket
-    write(network_socket, data, strlen(data));
+    write(client_socket, request_data, strlen(request_data));
 
     // clear buffer, just to avoid zombie bytes
     memset(server_response, 0, 1024);
 
     // listens to server responses, then put server response into buffer
-    read(network_socket, server_response, 1023); // exclude null terminator
+    read(client_socket, server_response, 1023); // exclude null terminator
 
     // close the connection
-    close(network_socket);
+    close(client_socket);
 
     // print server response
     printf("Sever responded with: %s\n ", server_response);
