@@ -1,0 +1,7 @@
+﻿  books.c
+C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\Game Development\DSA\my-to-reads\my-to-reads\headers\books.h(7,1): warning C4005: 'BOOK_PROGRESS_MAX_CHAR_INCLUDING_NULL_TERMINATOR': macro redefinition
+  (compiling source file 'source/books.c')
+  C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\Game Development\DSA\my-to-reads\my-to-reads\headers\books.h(6,1):
+  see previous definition of 'BOOK_PROGRESS_MAX_CHAR_INCLUDING_NULL_TERMINATOR'
+  
+  my-to-reads.vcxproj -> C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\Game Development\DSA\my-to-reads\x64\Debug\my-to-reads.exe

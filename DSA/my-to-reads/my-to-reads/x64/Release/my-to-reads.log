@@ -1,0 +1,17 @@
+﻿  books.c
+  main.c
+C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\low level stuff\DSA\my-to-reads\my-to-reads\headers\books.h(7,1): warning C4005: 'BOOK_PROGRESS_MAX_CHAR_INCLUDING_NULL_TERMINATOR': macro redefinition
+  (compiling source file 'source/books.c')
+  C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\low level stuff\DSA\my-to-reads\my-to-reads\headers\books.h(6,1):
+  see previous definition of 'BOOK_PROGRESS_MAX_CHAR_INCLUDING_NULL_TERMINATOR'
+  
+C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\low level stuff\DSA\my-to-reads\my-to-reads\headers\books.h(7,1): warning C4005: 'BOOK_PROGRESS_MAX_CHAR_INCLUDING_NULL_TERMINATOR': macro redefinition
+  (compiling source file 'source/main.c')
+  C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\low level stuff\DSA\my-to-reads\my-to-reads\headers\books.h(6,1):
+  see previous definition of 'BOOK_PROGRESS_MAX_CHAR_INCLUDING_NULL_TERMINATOR'
+  
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 15 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  my-to-reads.vcxproj -> C:\Users\nguye\Downloads\OneDrive\Desktop\software eng\Software Engineering\Development\low level stuff\DSA\my-to-reads\x64\Release\my-to-reads.exe
